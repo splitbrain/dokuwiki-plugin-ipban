@@ -1,0 +1,8 @@
+====== Access Denied ======
+
+Your IP address is currently not allowed to access this wiki. This may be
+because you abused the service, spammed the wiki or behaved otherwise wrongly.
+
+If you did nothing wrong you might be the innocent victim of someone else's
+misbehavior who had your IP before. If this is the case you should contact the
+wiki administrator and ask for lifting the ban.

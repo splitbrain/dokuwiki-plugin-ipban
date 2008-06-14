@@ -1,0 +1,6 @@
+author = Andreas Gohr
+email  = andi@splitbrain.org
+date   = 2008-06-14
+name   = IP Ban Manager
+desc   = Allows administrators and managers to ban certain IP addresses from accessing the wiki
+url    = http://wiki:splitbrain.org/plugin:ipban

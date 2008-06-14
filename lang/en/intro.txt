@@ -1,0 +1,6 @@
+====== IP Address based Access Bans ======
+
+This plugin allows you to ban certain users based on their IP address. Users
+accessing the wiki from a banned IP will only see an error message telling
+them about the ban and the explanation you gave.
+
