@@ -65,7 +65,10 @@ class action_plugin_ipban extends DokuWiki_Action_Plugin {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head><title>$title</title></head>
+<head>
+<title>$title</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+</head>
 <body style="font-family: Arial, sans-serif">
   <div style="width:60%; margin: auto; background-color: #fcc;
               border: 1px solid #faa; padding: 0.5em 1em;">
