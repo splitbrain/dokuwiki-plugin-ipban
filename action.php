@@ -35,20 +35,20 @@ class action_plugin_ipban extends DokuWiki_Action_Plugin {
             $fields = explode("\t", $ban);
             $banned = false;
             if (($p=strcspn($fields[0],'/-*')) != strlen($fields[0])) {
-              $cli = ip2long($client);
+              $cli = (float)sprintf("%u",ip2long($client));
               switch ($fields[0][$p]) {
                 case '/':
                   $mask = (pow(2, (32 - substr($fields[0],$p+1))) - 1);
-                  $v1 = ip2long(substr($fields[0], 0, $p)) & ~$mask;
+                  $v1 = (float)sprintf("%u",ip2long(substr($fields[0], 0, $p))) & ~$mask;
                   $v2 = $v1 | $mask;
                   break;
                 case '-':
-                  $v1 = ip2long(substr($fields[0], 0, $p));
-                  $v2 = ip2long(substr($fields[0], $p+1));
+                  $v1 = (float)sprintf("%u",ip2long(substr($fields[0], 0, $p)));
+                  $v2 = (float)sprintf("%u",ip2long(substr($fields[0], $p+1)));
                   break;
                 case '*':
-                  $v1 = ip2long(str_replace('*', '0', $fields[0]));
-                  $v2 = ip2long(str_replace('*', '255', $fields[0]));
+                  $v1 = (float)sprintf("%u",ip2long(str_replace('*', '0', $fields[0])));
+                  $v2 = (float)sprintf("%u",ip2long(str_replace('*', '255', $fields[0])));
                   break;
               }
               $banned = $v1 <= $cli && $cli <= $v2;
