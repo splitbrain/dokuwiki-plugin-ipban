@@ -30,9 +30,31 @@ class action_plugin_ipban extends DokuWiki_Action_Plugin {
         global $conf;
         $bans = @file($conf['cachedir'].'/ipbanplugin.txt');
         $client = clientIP(true);
-        if(is_array($bans)) foreach($bans as $ban){
-            $fields = explode("\t",$ban);
-            if($fields[0] == $client){
+        if(is_array($bans))
+          foreach($bans as $ban) {
+            $fields = explode("\t", $ban);
+            $banned = false;
+            if (($p=strcspn($fields[0],'/-*')) != strlen($fields[0])) {
+              $cli = ip2long($client);
+              switch ($fields[0][$p]) {
+                case '/':
+                  $mask = (pow(2, (32 - substr($fields[0],$p+1))) - 1);
+                  $v1 = ip2long(substr($fields[0], 0, $p)) & ~$mask;
+                  $v2 = $v1 | $mask;
+                  break;
+                case '-':
+                  $v1 = ip2long(substr($fields[0], 0, $p));
+                  $v2 = ip2long(substr($fields[0], $p+1));
+                  break;
+                case '*':
+                  $v1 = ip2long(str_replace('*', '0', $fields[0]));
+                  $v2 = ip2long(str_replace('*', '255', $fields[0]));
+                  break;
+              }
+              $banned = $v1 <= $cli && $cli <= $v2;
+            } elseif ($fields[0] == $client)
+                $banned =  TRUE;
+            if($banned){
                 $text = $this->plugin_locale_xhtml('banned');
                 $text .= sprintf('<p>'.$this->getLang('banned').'</p>',
                                  hsc($client), strftime($conf['dformat'],$fields[1]),
@@ -56,5 +78,4 @@ EOT;
             }
         }
     }
-
 }

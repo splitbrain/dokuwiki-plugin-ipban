@@ -30,10 +30,15 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin {
      */
     function handle() {
         global $conf;
-        if(preg_match('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/',trim($_REQUEST['ip']))){
-            $newban = trim($_REQUEST['ip'])."\t".time()."\t".$_SERVER['REMOTE_USER'];
-            $cause  = trim(preg_replace('/[\n\r\t]+/','',$_REQUEST['cause']));
-            $newban .= "\t".$cause."\n";
+        $m0 = '([1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])(\.([1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])){3}';
+        $m1 = '#^'.$m0.'$#';
+        $m2 = '#^'.$m0.'/(3[0-2]|[1-2]\d|[1-9])$#';
+        $m3 = '#^'.$m0.'-'.$m0.'$#';
+        $m4 = '#^([1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])(\.(\*|[1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])){3}$#';
+        $ip = trim($_REQUEST['ip']);
+        if(preg_match($m1, $ip) || preg_match($m2, $ip) || preg_match($m3, $ip) || preg_match($m4, $ip)){
+            $cause = trim(preg_replace('/[\n\r\t]+/','',$_REQUEST['cause']));
+            $newban = $ip."\t".time()."\t".$_SERVER['REMOTE_USER']."\t".$cause."\n";
             io_savefile($conf['cachedir'].'/ipbanplugin.txt',$newban,true);
         }
 
@@ -68,19 +73,25 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin {
         echo '<th>'.$this->getLang('del').'</th>';
         echo '</tr>';
         $bans = @file($conf['cachedir'].'/ipbanplugin.txt');
-        if(is_array($bans)) foreach($bans as $ban){
+        if(is_array($bans))
+          foreach($bans as $ban) {
             $fields = explode("\t",$ban);
             echo '<tr>';
             echo '<td>'.hsc($fields[0]).'</td>';
-            $host = @gethostbyaddr($fields[0]);
-            if(!$host || $host == $fields[0]) $host='?';
+            if (strpos($fields[0],'/') || strpos($fields[0],'-') || strpos($fields[0],'*')) {
+              $host=$this->getLang('range');
+            } else {
+              $host = @gethostbyaddr($fields[0]);
+              if(!$host || $host == $fields[0])
+                $host='?';
+            }
             echo '<td>'.hsc($host).'</td>';
             echo '<td>'.strftime($conf['dformat'],$fields[1]).'</td>';
             echo '<td>'.hsc($fields[2]).'</td>';
             echo '<td>'.hsc($fields[3]).'</td>';
             echo '<td><input type="submit" name="delip['.$fields[0].']" value="'.$this->getLang('del').'" class="button" /></td>';
             echo '</tr>';
-        }
+          }
         echo '<tr>';
         echo '<th colspan="6">';
         echo '<div>'.$this->getLang('newban').':</div>';
