@@ -55,7 +55,7 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin {
     function html() {
         global $conf;
 
-        echo $this->plugin_locale_xhtml('intro');
+        echo $this->locale_xhtml('intro');
 
         echo '<form method="post" action="">';
         echo '<table class="inline" width="100%">';
