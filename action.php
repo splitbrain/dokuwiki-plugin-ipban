@@ -33,7 +33,7 @@ class action_plugin_ipban extends DokuWiki_Action_Plugin {
         if(is_array($bans)) foreach($bans as $ban){
             $fields = explode("\t",$ban);
             if($fields[0] == $client){
-                $text = $this->plugin_locale_xhtml('banned');
+                $text = $this->locale_xhtml('banned');
                 $text .= sprintf('<p>'.$this->getLang('banned').'</p>',
                                  hsc($client), strftime($conf['dformat'],$fields[1]),
                                  hsc($fields[3]));
