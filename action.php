@@ -55,7 +55,7 @@ class action_plugin_ipban extends DokuWiki_Action_Plugin {
             } elseif ($fields[0] == $client)
                 $banned =  TRUE;
             if($banned){
-                $text = $this->plugin_locale_xhtml('banned');
+                $text = $this->locale_xhtml('banned');
                 $text .= sprintf('<p>'.$this->getLang('banned').'</p>',
                                  hsc($client), strftime($conf['dformat'],$fields[1]),
                                  hsc($fields[3]));
