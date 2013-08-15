@@ -1,0 +1,4 @@
+====== IP basierende Zugriffssperre ======
+Dieses Plugin erlaubt es Ihnen bestimmte User aufgrund ihrer IP-Adresse zu sperren. User die von einer gesperrten IP-Adresse auf dieses Wiki zugreifen werden nur eine Fehlermeldung erhalten, die über die Sperre und den Sperrgrund informiert.
+
+
