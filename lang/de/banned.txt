@@ -1,0 +1,4 @@
+====== Zugriff verweigert======
+Ihrer IP ist es zur Zeit nicht gestattet dieses Wiki zu benutzen. Dies kann darin begründet sein, dass Sie den Service missbraucht, das Wiki vollgespammt oder sich in einer anderen Weise falsch verhalten haben.
+
+Wenn Sie sich keiner Schuld bewusst sind, könnten Sie ein Opfer des Fehlverhaltens von einer anderen Person sein, deren IP-Adresse jetzt Ihnen zugeteilt wurde. Sollte dies der Fall sein, wenden Sie sich bitte an den Administrator des Wikis und fragen Sie nach der Aufhebung der IP-Sperre.
