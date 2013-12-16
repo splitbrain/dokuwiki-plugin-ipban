@@ -4,11 +4,14 @@
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  * 
  * @author bruno <bruno@ninesys.fr>
+ * @author NicolasFriedli <nicolas@theologique.ch>
  */
+$lang['menu']                  = 'Gestionnaire de banissement IP';
 $lang['ip']                    = 'Adresse IP';
 $lang['host']                  = 'Nom d\'hôte';
 $lang['date']                  = 'Date';
 $lang['by']                    = 'Banni par';
+$lang['cause']                 = 'Explication';
 $lang['del']                   = 'Effacer';
 $lang['ban']                   = 'Ban';
 $lang['newban']                = 'Ajouter un nouveau ban';
