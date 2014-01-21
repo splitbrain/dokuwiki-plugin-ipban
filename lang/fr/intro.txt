@@ -1,3 +1,3 @@
 ====== Banissement basé sur l'adresse IP ======
 
-Ce plugin vous permet de bannir certains utilisateurs en fonction de leur adresse IP. Les utilisateurs bannis qui cherchent à accéder au wiki reçoivent un message d'erreur leur expliquant ce qu'est un bannissement ainsi que ses raisons.
+Cette extension vous permet de bannir certains utilisateurs en fonction de leur adresse IP. Les utilisateurs bannis qui cherchent à accéder au wiki reçoivent un message d'erreur leur expliquant ce qu'est un bannissement ainsi que ses raisons.
