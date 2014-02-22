@@ -1,0 +1,4 @@
+====== IP adres gebaseerde toegangs beperking ======
+
+Deze plugin maakt het mogelijk om bepaalde gebruikers op basis van hun IP adres te blokkeren.
+Gebruikers waarvan de toegang wordt geweigerd zien alleen een foutmelding die mededeelt dat zij zijn geblokkeerd en de reden die u daarvoor gaf. 
