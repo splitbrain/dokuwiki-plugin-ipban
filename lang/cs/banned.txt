@@ -1,0 +1,7 @@
+====== Přístup zamítnut ======
+
+Pro IP adresu ze které se momentálně připojujete k wiki byl přístup zamítnut. To může být způsobeno zneužitím služby, spamováním wiki nebo jiným pochybením z vaší strany.
+
+Pokud jste nedělali nic špatného, možná jste se stali nevinnou obětí pochybení někoho jiného
+kdo měl tuto IP adresu před vámi. Pokud je toto váš případ, kontaktujte
+administrátora wiki a požádejte o zrušení zákazu.

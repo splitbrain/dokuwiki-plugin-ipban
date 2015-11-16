@@ -1,0 +1,3 @@
+====== Zákaz přístupu na základě IP adres ======
+
+Tento zásuvný modul umožňuje zakázat přístup uživatelům na základě jejich IP adres. Uživatelé přistupující na wiki ze zakázaných IP adres uvidí pouze chybové hlášení s odůvodněním vámi vystaveného zákazu.
