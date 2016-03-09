@@ -1,0 +1,3 @@
+====== Ban degli utenti basato sugli IP ======
+
+Questo plugin permette di bloccare determinati utenti in base al loro indirizzo IP. Gli utenti che accedono tramite wifi da un IP bannato vedranno solo un messaggio d'errore che blocca l'accesso e spiega la motivazione.

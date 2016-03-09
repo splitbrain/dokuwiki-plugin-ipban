@@ -1,0 +1,5 @@
+====== Accesso negato ====== 
+
+Il tuo indirizzo IP è stato bannato da questa wiki. Ciò può essere dovuto al fatto che si è abusato del servizio, è stata inviata spam nel sistema o sono state tenute delle condotte scorrette e/o lesive nei confronti del servizio e/o degli altri utenti.
+
+Se non avete fatto niente di tutto questo, potreste essere la vittima  del comportamento di un altre utente a cui è stato assegnato in passato lo stesso vostro IP.  In questo caso è necessario che contattiate l'amministratore del wiki e chiediate la revoca del ban.
