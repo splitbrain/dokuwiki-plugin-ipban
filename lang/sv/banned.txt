@@ -1,0 +1,5 @@
+====== Åtkomst nekad ======
+
+Din IP-adress är för närvarande inte godkänd för åtkomst till denna wiki. Anledningen kan vara att du missbrukat tjänsten, spammat wikin eller på något annat vis misskött dig.
+
+Om du inte gjort något fel kan du vara oskyldigt offer för någon att någon annan, som tidigare haft samma IP, misskött sig. Om så är fallet borde du kontakta wikiadministratören och be att blockeringen hävs.

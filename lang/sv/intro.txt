@@ -1,0 +1,3 @@
+====== Åtkomstblockering baserat på IP-adresser ======
+
+Detta plugin låter dig blockera utvalda användare på basen av deras IP-adress. Användare som försöker nå wikin från en blockerad IP-adress kommer bara att se ett felmeddelande som upplyser om blockeringen och den förklaring som du angav.
