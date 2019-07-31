@@ -23,24 +23,32 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin
     function handle()
     {
         global $conf;
-        if (preg_match('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/', trim($_REQUEST['ip']))) {
-            $newban = trim($_REQUEST['ip']) . "\t" . time() . "\t" . $_SERVER['REMOTE_USER'];
-            $cause = trim(preg_replace('/[\n\r\t]+/', '', $_REQUEST['cause']));
-            $newban .= "\t" . $cause . "\n";
-            io_savefile($conf['cachedir'] . '/ipbanplugin.txt', $newban, true);
+        global $INPUT;
+
+        $ip = trim($INPUT->str('ip'));
+        if ($ip) {
+            require_once(__DIR__ . '/ip-lib/ip-lib.php');
+            $range = \IPLib\Factory::rangeFromString($ip);
+            if ($range === null) {
+                msg($this->getLang('badrange'), -1);
+            } else {
+                $newban = $ip . "\t" . time() . "\t" . $INPUT->server->str('REMOTE_USER');
+                $cause = trim(preg_replace('/[\n\r\t]+/', '', $INPUT->str('cause')));
+                $newban .= "\t" . $cause . "\n";
+                io_savefile($conf['cachedir'] . '/ipbanplugin.txt', $newban, true);
+            }
+
         }
 
-        if (is_array($_REQUEST['delip'])) {
-            $del = trim(array_shift(array_keys($_REQUEST['delip'])));
-            $del = preg_quote($del, '/');
-            $new = array();
-            $bans = @file($conf['cachedir'] . '/ipbanplugin.txt');
-            if (is_array($bans)) {
-                foreach ($bans as $ban) {
-                    if (!preg_match('/^' . $del . '\t/', $ban)) $new[] = $ban;
-                }
-            }
-            io_savefile($conf['cachedir'] . '/ipbanplugin.txt', join('', $new));
+        $delip = $INPUT->extract('delip')->str('delip');
+        if ($delip) {
+            $delip = preg_quote($delip, '/');
+
+            io_deleteFromFile(
+                $conf['cachedir'] . '/ipbanplugin.txt',
+                '/^' . $delip . '\t/',
+                true
+            );
         }
     }
 
@@ -55,7 +63,6 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin
         echo '<table class="inline" width="100%">';
         echo '<tr>';
         echo '<th>' . $this->getLang('ip') . '</th>';
-        echo '<th>' . $this->getLang('host') . '</th>';
         echo '<th>' . $this->getLang('date') . '</th>';
         echo '<th>' . $this->getLang('by') . '</th>';
         echo '<th>' . $this->getLang('cause') . '</th>';
@@ -67,9 +74,6 @@ class admin_plugin_ipban extends DokuWiki_Admin_Plugin
                 $fields = explode("\t", $ban);
                 echo '<tr>';
                 echo '<td>' . hsc($fields[0]) . '</td>';
-                $host = @gethostbyaddr($fields[0]);
-                if (!$host || $host == $fields[0]) $host = '?';
-                echo '<td>' . hsc($host) . '</td>';
                 echo '<td>' . strftime($conf['dformat'], $fields[1]) . '</td>';
                 echo '<td>' . hsc($fields[2]) . '</td>';
                 echo '<td>' . hsc($fields[3]) . '</td>';

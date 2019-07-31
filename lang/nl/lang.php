@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP Blokkeer beheerder';
 $lang['ip']                    = 'IP adres';
-$lang['host']                  = 'Host naam';
 $lang['date']                  = 'Datum';
 $lang['by']                    = 'Geblokkeerd door';
 $lang['cause']                 = 'Toelichting';

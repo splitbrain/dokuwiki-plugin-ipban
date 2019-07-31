@@ -8,7 +8,6 @@
  */
 $lang['menu']                  = 'Gestionnaire de banissement IP';
 $lang['ip']                    = 'Adresse IP';
-$lang['host']                  = 'Nom d\'hôte';
 $lang['date']                  = 'Date';
 $lang['by']                    = 'Banni par';
 $lang['cause']                 = 'Explication';

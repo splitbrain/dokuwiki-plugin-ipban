@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP Keeldude Haldus';
 $lang['ip']                    = 'IP aadress';
-$lang['host']                  = 'Masinanimi';
 $lang['date']                  = 'Kuupäev';
 $lang['cause']                 = 'Selgitus';
 $lang['del']                   = 'Eemalda';

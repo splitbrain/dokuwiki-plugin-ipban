@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP-Sperren Manager';
 $lang['ip']                    = 'IP-Adresse';
-$lang['host']                  = 'Hostname';
 $lang['date']                  = 'Datum';
 $lang['by']                    = 'Gesperrt von';
 $lang['cause']                 = 'Begründung';

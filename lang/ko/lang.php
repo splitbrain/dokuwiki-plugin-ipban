@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP 차단 관리자';
 $lang['ip']                    = 'IP 주소';
-$lang['host']                  = '호스트 이름';
 $lang['date']                  = '날짜';
 $lang['by']                    = '차단자';
 $lang['cause']                 = '설명';

@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP-blockeringshanterare';
 $lang['ip']                    = 'IP-adresser';
-$lang['host']                  = 'Värdnamn';
 $lang['date']                  = 'Datum';
 $lang['by']                    = 'Blockerad av';
 $lang['cause']                 = 'Förklaring';

@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IPアドレス拒否管理';
 $lang['ip']                    = 'IPアドレス';
-$lang['host']                  = 'ホスト名';
 $lang['date']                  = '日付';
 $lang['by']                    = '登録者';
 $lang['cause']                 = '説明';

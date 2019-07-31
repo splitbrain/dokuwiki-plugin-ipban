@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'IP Ban Manager';
 $lang['ip']                    = 'IP adresa';
-$lang['host']                  = 'Jméno počítače';
 $lang['date']                  = 'Datum';
 $lang['by']                    = 'Zákaz vystaven od';
 $lang['cause']                 = 'Vysvětlení';

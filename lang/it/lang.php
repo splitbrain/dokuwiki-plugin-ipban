@@ -7,7 +7,6 @@
  */
 $lang['menu']                  = 'Gestione dei ban degli IP';
 $lang['ip']                    = 'Indirizzo IP';
-$lang['host']                  = 'Nome dell\'host';
 $lang['date']                  = 'Data';
 $lang['by']                    = 'Bannato da';
 $lang['cause']                 = 'Motivazione';
