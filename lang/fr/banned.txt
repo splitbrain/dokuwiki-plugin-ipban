@@ -1,5 +1,5 @@
 ====== Accès interdit ======
 
-Votre adresse IP est actuellement interdite d'accès à ce wiki, parce que vous avez commis un abus, spammé le wiki ou vous êtes rendu coupable d'un comportement fautif.
+Votre adresse IP est actuellement interdite d'accès à ce wiki. Ce peut être parce que vous avez commis un abus, spammé le wiki ou vous êtes comporté incorrectement.
 
-Si vous n'avez rien fait de mal, vous pouvez être l'innocente victime d'une autre personne qui possédait précédemment votre IP. Dans ce cas, vous devez contacter l'administrateur du wiki afin qu'il lève les sanctions.
+Si vous n'avez rien fait de mal, vous pouvez être l'innocente victime du comportement déplacé d'une personne qui possédait précédemment votre IP. Dans ce cas, vous devez contacter l'administrateur du wiki afin qu'il lève les sanctions.
