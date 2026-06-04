@@ -1,0 +1,8 @@
+====== Prístup zamietnutý ======
+
+Vaša IP adresa momentálne nemá povolený prístup k tejto wiki. Môže to byť
+preto, že ste službu zneužili, spamovali wiki alebo sa inak nevhodne správali.
+
+Ak ste neurobili nič zlé, môžete byť nevinnou obeťou nevhodného správania
+niekoho iného, kto mal vašu IP pred vami. V takom prípade kontaktujte
+administrátora wiki a požiadajte o zrušenie banu.
