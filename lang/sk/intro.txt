@@ -1,0 +1,6 @@
+====== Bany prístupu podľa IP adries ======
+
+Tento plugin umožňuje zabanovať určitých používateľov podľa ich IP adresy. Používatelia
+pristupujúci k wiki zo zabanovanej IP uvidia iba chybovú hlášku o bane
+a vysvetlenie, ktoré ste uviedli.
+
